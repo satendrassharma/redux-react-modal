@@ -42,7 +42,7 @@ class ModalWrapper extends React.Component {
           <h1>{this.props.Header}</h1>
           {this.props.children}
           <hr />
-          <button onClick={this.props.onClose}>Close</button>
+          <button onClick={this.props.onClose} className="btn btn-danger">Close</button>
         </div>
       </div>,
       this.el

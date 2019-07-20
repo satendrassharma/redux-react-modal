@@ -15,7 +15,7 @@ class DeletePostModal extends Component {
     return (
       <ModalWrapper Header={`Delete post ${name}`} onClose={hideModal}>
         <p>It will delete post permanently!!!</p>
-        <button onClick={this.onDelete}>ok</button>
+        <button onClick={this.onDelete} className="btn btn-success">ok</button>
       </ModalWrapper>
     );
   }

@@ -40,24 +40,37 @@ class UpdatePostModal extends Component {
     return (
       <ModalWrapper Header={`Update post ${name}`} onClose={hideModal}>
         <div>
+          {" "}
           <form onSubmit={this.onSubmit}>
-            <label>Author name:</label>
-            <input
-              type="text"
-              name="author"
-              value={this.state.author}
-              onChange={this.onChange}
-            />
-            <br />
-            <label>Post:</label>
-            <input
-              type="text"
-              name="post"
-              value={this.state.post}
-              onChange={this.onChange}
-            />
-            <br />
-            <button>submit</button>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Author name:</label>
+              <input
+                name="author"
+                onChange={this.onChange}
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter author name"
+                value={this.state.author}
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Post:</label>
+              <input
+                type="text"
+                name="post"
+                onChange={this.onChange}
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="Enter the post"
+                value={this.state.post}
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Submit
+            </button>
           </form>
         </div>
       </ModalWrapper>

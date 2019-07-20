@@ -10,7 +10,7 @@ import {
 import axios from "axios";
 
 export const getPost = postId => dispatch => {
-  dispatch(setPostLoading);
+  dispatch(setPostLoading());
   return axios
     .get(`/api/post/${postId}`)
     .then(res => dispatch({ type: GET_POST, payload: res.data }))
@@ -18,7 +18,7 @@ export const getPost = postId => dispatch => {
 };
 
 export const getPosts = () => dispatch => {
-  dispatch(setPostLoading);
+  dispatch(setPostLoading());
   return axios
     .get("/api/post/all")
     .then(res => dispatch({ type: GET_POSTS, payload: res.data }))
